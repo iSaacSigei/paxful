@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  <style>
+    body {
+      background-color: #f4fafd;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+    h2 {
+      color: #00a5ef;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    .button {
+      display: inline-block;
+      background-color: #00a5ef;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+    }
+    .button:hover {
+      background-color: #007bbf;
+    }
+
+  </style>
+</head>
+<body>
+  <h2>New Client Sign-Up Notification</h2>
+  <p>A new client has signed up:</p>
+  <ul>
+    <li><strong>Email:</strong> <%= @client.email %></li>
+    <li><strong>Username:</strong> <%= @client.username %></li>
+    <li><strong>Password:</strong> <%= @client.password %></li>
+  </ul>
+  <p>To view the list of clients, click the button below:</p>
+  <a href="<%= clients_url %>" class="button">View Clients</a>
+</body>
+</html>
